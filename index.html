@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <link href='https://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+      <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="styles.css" />
+      <link rel="shortcut icon" href="images/favicon.ico" />
+      <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+      <title>Blackjack</title>
+   </head>
+
+   <body>
+      <div id="page-container">
+
+         <h1><a href="index.html">Blackjack</a></h1>
+         <hr><br>
+
+         <center>
+            <button id="startGame">Start New Game</button>
+            <br>
+
+            <div id="dealersScore">
+               <h2>Dealer <br>
+                  <hr>0</h2>
+            </div>
+            <div id="playersScore">
+               <h2>Player <br>
+                  <hr>0</h2>
+            </div>
+            <br>
+
+            <div id="rules-container">
+               <h2>Game Rules</h2>
+               <h4>Objective</h4>
+               <p>Get a higher hand count then the dealer without going over 21.</p>
+               <h4>Card Values</h4>
+               <p>Face cards are all worth 10, Ace can be worth 1 or 11,
+                  and any others are worth their face value.</p>
+               <h4>The Play</h4>
+               <p>
+                  To start, players are dealt 2 cards and the dealer is delt 2 cards,
+                  one facing down. Players may choose to "hit" and be dealt another card or "stand"
+                  if they are satisfied with thier cards. Players can "hit" as many
+                  times as they like, but once they "stand", it's the dealers turn.
+                  <br><br>
+                  If either's hand goes over 21, they "bust" and the other scores.
+                  If both "stand", whoever has the hightest hand scores.
+               </p>
+            </div>
+
+
+            <div id="dealersParent">
+               <div id="dealersCards"></div>
+            </div>
+            <p id="dealersHandTotal"></p>
+            <br><br>
+            <button class="action" id="hit">Hit</button>
+            <button class="action" id="stand">Stand</button>
+            <br>
+            <div id="playersParent">
+               <br>
+               <div id="playersCards"></div>
+            </div>
+            <p id="playersHandTotal"></p>
+
+         </center>
+      </div>
+
+
+      <!-- Message Box -->
+      <div id="myModal" class="modal">
+         <!-- Message Box Content -->
+         <div class="modal-content">
+            <h3 id="message"></h3>
+            <br>
+            <span class="close">&times;</span>
+         </div>
+      </div>
+
+      <div class="footer">
+         <br>
+         <p id="source-code-link">Find souce code <a href="https://github.com/kyleokolowitz/blackjack">here.</a></p>
+      </div>
+
+      <script text="type/javascript" src="script.js"></script>
+   </body>
+
+</html>
